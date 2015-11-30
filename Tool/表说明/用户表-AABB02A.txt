@@ -13,6 +13,10 @@ create table  AABB02A
     AABB02A100 NUMBER(10,2),
     AABB02A110 VARCHAR2(500),
     AABB02A120 VARCHAR2(500),
+    AABB02A130 INT,
+    AABB02A140 INT,
+    AABB02A150 VARCHAR2(10),
+    AABB02A160 VARCHAR2(6),	
     primary key (AABB02A010)
 );
 comment on table AABB02A is '用户表';
@@ -28,3 +32,7 @@ comment on column AABB02A.AABB02A090 is '谁推荐我的 用户ID或者为空';
 comment on column AABB02A.AABB02A100 is '返利余额';
 comment on column AABB02A.AABB02A110 is '推荐链接';
 comment on column AABB02A.AABB02A120 is '注册时间';
+comment on column AABB02A.AABB02A130 is '邮箱是否已注册';
+comment on column AABB02A.AABB02A140 is '手机是否已注册';
+comment on column AABB02A.AABB02A150 is '邮箱注册码';
+comment on column AABB02A.AABB02A160 is '手机注册码';

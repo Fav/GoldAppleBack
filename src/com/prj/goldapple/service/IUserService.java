@@ -22,4 +22,7 @@ public interface IUserService {
     public abstract int update(AABB02A example);
     	    
     public abstract List<AABB02A> queryForList(Map<String,Object> params);
+    
+    public abstract AABB02A queryByEmail(String email);
+    public abstract AABB02A queryByPhone(String phone);
 }

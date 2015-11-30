@@ -1,5 +1,6 @@
 ﻿package com.prj.goldapple.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.prj.goldapple.bean.AABB02A;
 import com.prj.goldapple.service.IUserService;
+import com.prj.util.CommonVar;
 
 @Controller
 @RequestMapping("/user/")
@@ -35,12 +37,12 @@ public class UserController {
 		try {
 			AABB02A aabb02a = new AABB02A();
 			aabb02a.setAABB02A010(UUID.randomUUID().toString());
-		userService.create(aabb02a);
+			userService.create(aabb02a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -51,10 +53,10 @@ public class UserController {
 		try {
 			userService.delete(userId);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -65,10 +67,10 @@ public class UserController {
 		try {
 			userService.update(aabb02a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -86,4 +88,45 @@ public class UserController {
 		return lst;
 	}
 
+	@ResponseBody
+	@RequestMapping("queryByEmail")
+	public AABB02A queryByEmail(String email) {
+		AABB02A aabb02a = userService.queryByEmail(email);
+		return aabb02a;
+	}
+
+	@ResponseBody
+	@RequestMapping("queryByPhone")
+	public AABB02A queryByPhone(String phone) {
+		AABB02A aabb02a = userService.queryByPhone(phone);
+		return aabb02a;
+	}
+
+	@ResponseBody
+	@RequestMapping("verificationEmail")
+	public Map<String, String> verificationEmail(String userId, String code) {
+		Map<String, String> map = new HashMap<String, String>();
+		String string = "";
+		try {
+			AABB02A aabb02a = userService.retrieve(userId);
+			// aabb02a.se
+			if (aabb02a != null && aabb02a.getAABB02A150() == code) {
+				aabb02a.setAABB02A130(1);
+				userService.update(aabb02a);
+				string = CommonVar.SUCCESS;
+			} else {
+				string = CommonVar.FAIL;
+			}
+		} catch (Exception e) {
+			string = CommonVar.FAIL;
+		}
+		map.put(CommonVar.RESULT, string);
+		return map;
+	}
+
+	@ResponseBody
+	@RequestMapping("addEmail")
+	public List<String> Test() throws Exception {
+		return new ArrayList<String>();
+	}
 }

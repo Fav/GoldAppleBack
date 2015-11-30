@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.prj.goldapple.bean.AABB04A;
 import com.prj.goldapple.service.IHouseInfoService;
+import com.prj.util.CommonVar;
 
 @Controller
 @RequestMapping("/houseInfo/")
@@ -43,10 +44,10 @@ public class HouseInfoController {
 			aabb04a.setAABB04A010(UUID.randomUUID().toString());
 			houseInfoService.create(aabb04a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -57,10 +58,10 @@ public class HouseInfoController {
 		try {
 			houseInfoService.delete(userId);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -71,10 +72,10 @@ public class HouseInfoController {
 		try {
 			houseInfoService.update(aabb04a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 

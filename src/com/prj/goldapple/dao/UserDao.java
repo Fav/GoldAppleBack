@@ -22,4 +22,7 @@ public interface UserDao {
     public int update(AABB02A example);
     
     public List<AABB02A> queryForList(Map<String,Object> params);
+    
+    public AABB02A queryByEmail(String email);
+    public AABB02A queryByPhone(String phone);
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.prj.goldapple.bean.AABB05A;
 import com.prj.goldapple.service.IReservationInfoService;
+import com.prj.util.CommonVar;
 
 @Controller
 @RequestMapping("/reservationInfo/")
@@ -43,10 +44,10 @@ public class ReservationInfoController {
 			aabb05a.setAABB05A010(UUID.randomUUID().toString());
 			reservationInfoService.create(aabb05a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -57,10 +58,10 @@ public class ReservationInfoController {
 		try {
 			reservationInfoService.delete(userId);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -71,10 +72,10 @@ public class ReservationInfoController {
 		try {
 			reservationInfoService.update(aabb05a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 

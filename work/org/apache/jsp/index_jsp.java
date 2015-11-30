@@ -79,6 +79,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<li><a href=\"emp/doGetEmpList.do\" target=\"_blank\">查询Emp信息</a></li>\r\n");
       out.write("\t\t\t<li><a href=\"emp/getJSON.do\" target=\"_blank\">json</a></li>\r\n");
       out.write("\t\t\t<li><a href=\"user/emaillogin.html\" target=\"_blank\">login</a></li>\r\n");
+      out.write("\t\t\t<li><a href=\"userType/getJSON.do\" target=\"_blank\">email</a></li>\r\n");
       out.write("\t\t</ul>\r\n");
       out.write("\t</body>\r\n");
       out.write("</html>\r\n");

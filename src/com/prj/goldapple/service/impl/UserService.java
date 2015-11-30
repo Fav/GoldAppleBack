@@ -71,5 +71,12 @@ public class UserService implements IUserService {
 	public List<AABB02A>  queryForList(Map<String, Object> params) {
 		return userDao.queryForList(params);
 	}
+	
+    public AABB02A queryByEmail(String email){
+		return userDao.queryByEmail(email);
+	}
+    public AABB02A queryByPhone(String phone){
+		return userDao.queryByPhone(phone);
+	}
 
 }

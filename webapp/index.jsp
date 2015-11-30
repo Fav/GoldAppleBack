@@ -21,6 +21,7 @@
 			<li><a href="emp/doGetEmpList.do" target="_blank">查询Emp信息</a></li>
 			<li><a href="emp/getJSON.do" target="_blank">json</a></li>
 			<li><a href="user/emaillogin.html" target="_blank">login</a></li>
+			<li><a href="userType/getJSON.do" target="_blank">email</a></li>
 		</ul>
 	</body>
 </html>

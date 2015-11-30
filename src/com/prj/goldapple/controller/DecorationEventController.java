@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.prj.goldapple.bean.AABB03A;
 import com.prj.goldapple.service.IDecorationEventService;
+import com.prj.util.CommonVar;
 
 @Controller
 @RequestMapping("/decorationEvent/")
@@ -43,10 +44,10 @@ public class DecorationEventController {
 			aabb03a.setAABB03A010(UUID.randomUUID().toString());
 			decorationEventService.create(aabb03a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -57,10 +58,10 @@ public class DecorationEventController {
 		try {
 			decorationEventService.delete(userId);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT,CommonVar.FAIL );
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT,  CommonVar.SUCCESS);
 		return map;
 	}
 
@@ -71,10 +72,10 @@ public class DecorationEventController {
 		try {
 			decorationEventService.update(aabb03a);
 		} catch (Exception e) {
-			map.put("result", "fail");
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
 			return map;
 		}
-		map.put("result", "success");
+		map.put(CommonVar.RESULT,  CommonVar.SUCCESS);
 		return map;
 	}
 

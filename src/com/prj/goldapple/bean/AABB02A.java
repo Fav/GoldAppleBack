@@ -4,7 +4,7 @@
  * 用户
  * 
  * @author huqi
- * @date 2015/11/26 17:02:36
+ * @date 2015/11/30 20:02:41
  * @version1.0
  */
 public class AABB02A {
@@ -15,7 +15,7 @@ public class AABB02A {
     /*
      * 用户类型
      */
-    private Integer AABB02A020;
+    private int AABB02A020;
     /*
      * 姓名
      */
@@ -29,7 +29,7 @@ public class AABB02A {
      */
     private String AABB02A050;
     /*
-     * 邮箱 
+     * 邮箱
      */
     private String AABB02A060;
     /*
@@ -57,38 +57,34 @@ public class AABB02A {
      */
     private String AABB02A120;
     /*
-     * 用户类型
+     * 邮箱是否已注册
      */
-    private AABB01A AABB01A;
+    private int AABB02A130;
+    /*
+     * 手机是否已注册
+     */
+    private int AABB02A140;
+    /*
+     * 邮箱注册码
+     */
+    private String AABB02A150;
+    /*
+     * 手机注册码
+     */
+    private String AABB02A160;
 
-    public AABB01A getAABB01A() {
-		return AABB01A;
-	}
-
-	public void setAABB01A(AABB01A aABB01A) {
-		AABB01A = aABB01A;
-	}
-
-	public String getAABB02A120() {
-		return AABB02A120;
-	}
-
-	public void setAABB02A120(String aABB02A120) {
-		AABB02A120 = aABB02A120;
-	}
-
-	public String getAABB02A010() { 
+    public String getAABB02A010() { 
         return AABB02A010;
     }
 
     public void setAABB02A010(String aABB02A010) {
         AABB02A010 = aABB02A010;
     }
-    public Integer getAABB02A020() { 
+    public int getAABB02A020() { 
         return AABB02A020;
     }
 
-    public void setAABB02A020(Integer aABB02A020) {
+    public void setAABB02A020(int aABB02A020) {
         AABB02A020 = aABB02A020;
     }
     public String getAABB02A030() { 
@@ -153,6 +149,41 @@ public class AABB02A {
 
     public void setAABB02A110(String aABB02A110) {
         AABB02A110 = aABB02A110;
+    }
+    public String getAABB02A120() { 
+        return AABB02A120;
+    }
+
+    public void setAABB02A120(String aABB02A120) {
+        AABB02A120 = aABB02A120;
+    }
+    public int getAABB02A130() { 
+        return AABB02A130;
+    }
+
+    public void setAABB02A130(int aABB02A130) {
+        AABB02A130 = aABB02A130;
+    }
+    public int getAABB02A140() { 
+        return AABB02A140;
+    }
+
+    public void setAABB02A140(int aABB02A140) {
+        AABB02A140 = aABB02A140;
+    }
+    public String getAABB02A150() { 
+        return AABB02A150;
+    }
+
+    public void setAABB02A150(String aABB02A150) {
+        AABB02A150 = aABB02A150;
+    }
+    public String getAABB02A160() { 
+        return AABB02A160;
+    }
+
+    public void setAABB02A160(String aABB02A160) {
+        AABB02A160 = aABB02A160;
     }
 
 }

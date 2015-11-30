@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2015-11-29 12:32:27
+Date: 2015-11-30 20:01:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,10 +32,16 @@ CREATE TABLE `aabb02a` (
   `AABB02A100` double DEFAULT NULL COMMENT '返利余额',
   `AABB02A110` varchar(500) DEFAULT NULL COMMENT '推荐链接',
   `AABB02A120` varchar(500) DEFAULT NULL COMMENT '注册时间',
+  `AABB02A130` int(11) DEFAULT NULL,
+  `AABB02A140` int(11) DEFAULT NULL,
+  `AABB02A150` varchar(10) DEFAULT NULL,
+  `AABB02A160` varchar(6) DEFAULT NULL,
   PRIMARY KEY (`AABB02A010`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of aabb02a
 -- ----------------------------
-INSERT INTO `aabb02a` VALUES ('4d93469e-a96c-4155-abdc-cb352767b3b0', '1', 'gy', 'admin', '12345', 'gy@qq.com', '13912345678', null, null, '0', null, null);
+INSERT INTO `aabb02a` VALUES ('420f55d1-9324-47d9-9b78-690af1f83e8b', '1', 'gy', 'admin', '12345', 'gy@qq.com', '13912345678', null, null, '0', null, null, null, null, null, null);
+INSERT INTO `aabb02a` VALUES ('4d93469e-a96c-4155-abdc-cb352767b3b0', '1', 'gy', 'admin', '12345', 'gy@qq.com', '13912345678', null, null, '0', null, null, null, null, null, null);
+INSERT INTO `aabb02a` VALUES ('5e1e58c5-5b8e-4144-afcf-a57ced7ce5fe', '1', 'gy', 'admin', '12345', 'gy@qq.com', '13912345678', null, null, '0', null, null, null, null, null, null);
