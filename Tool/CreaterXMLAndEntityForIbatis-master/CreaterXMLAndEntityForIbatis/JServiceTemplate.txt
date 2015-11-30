@@ -1,0 +1,66 @@
+package com.prj.goldapple.service.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.prj.goldapple.bean.<%tableName%>;
+import com.prj.goldapple.dao.<%actionName%>Dao;
+import com.prj.goldapple.service.I<%actionName%>Service;
+
+/***
+ * <%tableDescripe%>
+ * 
+ * @author <%creater%>
+ * @date <%createTime%>
+ * @version1.0
+ */
+@Service("<%actionVarName%>Service")
+public class <%actionName%>Service implements I<%actionName%>Service {
+	private <%actionName%>Dao <%actionVarName%>Dao;
+
+	public <%actionName%>Dao get<%actionName%>Dao() {
+		return <%actionVarName%>Dao;
+	}
+
+	@Autowired
+	public void set<%actionName%>Dao(<%actionName%>Dao <%actionVarName%>Dao) {
+		this.<%actionVarName%>Dao = <%actionVarName%>Dao;
+	}
+	/**
+	 * @param params
+	 * @return
+	 */
+	public <%tableName%> retrieve(String key){
+		return <%actionVarName%>Dao.retrieve(key);
+	}
+	/**
+	 * @param obj
+	 */
+	 public int update(<%tableName%> obj){
+		return <%actionVarName%>Dao.update(obj);
+	 }
+	 /**
+	 * @param obj
+	 */
+	 public int create(<%tableName%> obj){
+		return <%actionVarName%>Dao.create(obj);
+	 }
+	 /**
+	  * @param key
+	  */
+	 public int delete(String key){
+		return <%actionVarName%>Dao.delete(key);
+	 }
+	/**
+	 * 
+	 * @param params
+	 * @return
+	 */
+	public List<<%tableName%>>  queryForList(Map<String, Object> params) {
+		return <%actionVarName%>Dao.queryForList(params);
+	}
+
+}

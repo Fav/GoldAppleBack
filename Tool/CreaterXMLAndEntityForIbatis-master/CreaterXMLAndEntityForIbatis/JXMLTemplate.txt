@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.prj.goldapple.dao.<%actionName%>Dao">
+	<!-- result map -->
+	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.<%tableCode%>">
+		<%resultMap%>
+	</resultMap>
+
+	<!-- column fields -->
+	<sql id="allColumn">
+		 <%allColumn%>
+	</sql>
+
+	<!-- create domain -->
+	<insert id="create" parameterType="com.prj.goldapple.bean.<%tableCode%>">
+		insert into <%tableCode%>
+		(
+		<include refid="allColumn" />
+		)
+		values
+		(
+		<%create%>
+		)
+	</insert>
+
+	<!-- update domain -->
+	<update id="update" parameterType="com.prj.goldapple.bean.<%tableCode%>">
+		update <%tableCode%>
+		<set>
+			 <%update%>
+		</set>
+		where <%primarykey%>
+	</update>
+
+	<!-- delete domain -->
+	<delete id="delete" parameterType="java.lang.String">
+		delete from <%tableCode%>
+		where
+		<%primarykey%>
+	</delete>
+
+	<!-- query domain where condition -->
+	<sql id="dynamicWhere">
+		 <%dynamicWhere%>
+	</sql>
+
+	<!-- query domain -->
+	<select id="queryForList" resultMap="BaseResultMap" parameterType="java.util.HashMap">
+		select
+		<include refid="allColumn" />
+		from <%tableCode%>
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		select count(*)
+		from <%tableCode%>
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
+		select
+		<include refid="allColumn" />
+		from <%tableCode%>
+		where <%primarykey%>
+	</select>
+
+</mapper>

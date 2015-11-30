@@ -1,0 +1,30 @@
+--装修事件
+create table  AABB03A
+(
+    AABB03A010 VARCHAR2(36) not null,
+    AABB03A020 VARCHAR2(36),
+    AABB03A030 VARCHAR2(500),
+    AABB03A040 VARCHAR2(500),
+    AABB03A050 VARCHAR2(500),
+    AABB03A060 VARCHAR2(500),
+    AABB03A070 NUMBER(10,2),
+    AABB03A080 NUMBER,
+    AABB03A090 DATETIME,
+    AABB03A100 DATETIME,
+    AABB03A110 NUMBER(10,2),
+    AABB03A120 VARCHAR2(36),
+    primary key (AABB03A010)
+);
+comment on table AABB03A is '装修事件';
+comment on column AABB03A.AABB03A010 is '编号 GUID';
+comment on column AABB03A.AABB03A020 is '房屋信息';
+comment on column AABB03A.AABB03A030 is '装修套餐';
+comment on column AABB03A.AABB03A040 is '装修进度';
+comment on column AABB03A.AABB03A050 is '主材产品 主材产品编号逗号相连';
+comment on column AABB03A.AABB03A060 is '顾问';
+comment on column AABB03A.AABB03A070 is '金额';
+comment on column AABB03A.AABB03A080 is '状态 返利中，已完成';
+comment on column AABB03A.AABB03A090 is '开始时间';
+comment on column AABB03A.AABB03A100 is '预计结束时间';
+comment on column AABB03A.AABB03A110 is '返利金额';
+comment on column AABB03A.AABB03A120 is '用户id 一个用户可能有多个装修事件';

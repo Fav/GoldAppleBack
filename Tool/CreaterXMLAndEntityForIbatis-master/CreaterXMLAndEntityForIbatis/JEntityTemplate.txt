@@ -1,0 +1,13 @@
+package com.prj.goldapple.bean;
+
+/***
+ * <%tableDescripe%>
+ * 
+ * @author <%creater%>
+ * @date <%createTime%>
+ * @version1.0
+ */
+public class <%className%> {
+<%allField%>
+<%classContent%>
+}

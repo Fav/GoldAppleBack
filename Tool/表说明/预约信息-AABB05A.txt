@@ -1,0 +1,19 @@
+create table  AABB05A
+(
+    AABB05A010 VARCHAR2(36) not null,
+    AABB05A020 VARCHAR2(36),
+    AABB05A030 VARCHAR2(500),
+    AABB05A040 VARCHAR2(500),
+    AABB05A050 VARCHAR2(500),
+    AABB05A060 VARCHAR2(500),
+    AABB05A070 VARCHAR2(500)，
+	primary key (AABB03A010)
+);
+comment on table AABB05A is '预约信息';
+comment on column AABB05A.AABB05A010 is '编号';
+comment on column AABB05A.AABB05A020 is '房屋信息编号';
+comment on column AABB05A.AABB05A030 is '房屋信息';
+comment on column AABB05A.AABB05A040 is '客户称呼';
+comment on column AABB05A.AABB05A050 is '客户联系电话';
+comment on column AABB05A.AABB05A060 is '装修风格';
+comment on column AABB05A.AABB05A070 is '邀请码';

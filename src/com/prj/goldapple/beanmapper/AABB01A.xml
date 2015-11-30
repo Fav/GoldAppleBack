@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.prj.goldapple.dao.UserTypeDao">
+	<!-- result map -->
+	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.AABB01A">
+           <id property="AABB01A010" column="AABB01A010" />
+           <id property="AABB01A020" column="AABB01A020" />
+	</resultMap>
+
+	<!-- column fields -->
+	<sql id="allColumn">
+		 AABB01A010,AABB01A020
+	</sql>
+
+	<!-- create domain -->
+	<insert id="create" parameterType="com.prj.goldapple.bean.AABB01A">
+		insert into AABB01A
+		(
+		<include refid="allColumn" />
+		)
+		values
+		(
+		#{AABB01A010},#{AABB01A020}
+		)
+	</insert>
+
+	<!-- update domain -->
+	<update id="update" parameterType="com.prj.goldapple.bean.AABB01A">
+		update AABB01A
+		<set>
+			 
+         <if test="AABB01A010 != null">AABB01A010 = #{AABB01A010}, </if>
+         <if test="AABB01A020 != null">AABB01A020 = #{AABB01A020}, </if>
+		</set>
+		where AABB01A010 = #{AABB01A010}
+	</update>
+
+	<!-- delete domain -->
+	<delete id="delete" parameterType="java.lang.String">
+		delete from AABB01A
+		where
+		AABB01A010 = #{AABB01A010}
+	</delete>
+
+	<!-- query domain where condition -->
+	<sql id="dynamicWhere">
+		 
+         <if test="AABB01A010 != null">and AABB01A010 like '%'||#{AABB01A010}||'%'</if>
+         <if test="AABB01A020 != null">and AABB01A020 like '%'||#{AABB01A020}||'%'</if>
+	</sql>
+
+	<!-- query domain -->
+	<select id="queryForList" resultMap="BaseResultMap" parameterType="java.util.HashMap">
+		select
+		<include refid="allColumn" />
+		from AABB01A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		select count(*)
+		from AABB01A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
+		select
+		<include refid="allColumn" />
+		from AABB01A
+		where AABB01A010 = #{AABB01A010}
+	</select>
+
+</mapper>

@@ -1,0 +1,5 @@
+AABB01A,UserType
+AABB02A,User
+AABB03A,DecorationEvent
+AABB04A,HouseInfo
+AABB05A,ReservationInfo

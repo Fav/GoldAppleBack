@@ -1,0 +1,84 @@
+/**
+	author:gaoyi;
+	time:2015-11-26;
+	describe:会员模块样式;
+  */
+  html,body{
+  	width: 100%;
+  	height: 100%;
+  	margin: 0px;
+  	padding: 0px;
+  }
+ 
+ .login-outerbox {
+ 	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	position: absolute;width:500px;height:400px;left:50%;top:50%; 
+	margin-left:-200px;margin-top:-200px;border:1px solid #ffffff;/*#eee*/
+	
+ }
+ .login-inline {
+ 	white-space:nowrap;
+ }
+ .login-innerbox {
+ 	border:1px #eee solid;
+ 	padding: 20px 0 0 0;
+ }
+
+ input[type='text'],input[type='password'] {
+ 	width: 145px!important;
+ }
+ .login-btn {
+ 	width: 245px!important;
+ }
+ .login-ele-offset {
+ 	left:15px;
+ }
+
+
+
+.login2-main {
+	position: relative;
+	top:28%;
+	width: 500px;
+	height: 340px;
+	border:1px #eee solid;
+	margin:0 auto;
+}
+.login2-main h1 {
+	font-size: 24px;
+	margin: 20px 23px;
+
+}
+.login-username input,.login2-pwd  input  {
+		width: 236px!important;
+}
+.login-username span,.login2-pwd span,.login2-pzm span{
+	font-size: 18px;
+	float: left;
+	line-height: 41px;
+
+}
+.login2-pzm span a {
+	padding-left:10px;	
+}
+.login-username,.login2-pwd {
+	margin-bottom: 10px;
+}
+.login2-pwd i {
+	padding: 0  9px;
+}
+.login2-btn {
+	border:1px #eee solid;
+	width: 283px;
+	height: 41px;
+	background-color: #ffcc33;
+	text-align: center;
+	line-height: 41px;
+	font-size: 18px;
+}
+.login2-btn {
+	margin-left: 93px;
+	margin-top:10px;
+}

@@ -1,0 +1,10 @@
+﻿--用户类型表
+create table  AABB01A
+(
+    AABB01A010 NUMBER(10) not null,
+    AABB01A020 VARCHAR2(100)
+    primary key (AABB02A010)
+);
+comment on table AABB01A is '用户类型';
+comment on column AABB01A.AABB01A010 is '编号';
+comment on column AABB01A.AABB01A020 is '名称';

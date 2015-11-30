@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.prj.goldapple.dao.HouseInfoDao">
+	<!-- result map -->
+	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.AABB04A">
+		
+           <id property="AABB04A010" column="AABB04A010" />
+           <id property="AABB04A020" column="AABB04A020" />
+           <id property="AABB04A030" column="AABB04A030" />
+           <id property="AABB04A040" column="AABB04A040" />
+           <id property="AABB04A050" column="AABB04A050" />
+           <id property="AABB04A060" column="AABB04A060" />
+           <id property="AABB04A070" column="AABB04A070" />
+           <id property="AABB04A080" column="AABB04A080" />
+           <id property="AABB04A090" column="AABB04A090" />
+           <id property="AABB04A100" column="AABB04A100" />
+           <id property="AABB04A110" column="AABB04A110" />
+           <id property="AABB04A120" column="AABB04A120" />
+	</resultMap>
+
+	<!-- column fields -->
+	<sql id="allColumn">
+		 AABB04A010,AABB04A020,AABB04A030,AABB04A040,AABB04A050,AABB04A060,AABB04A070,AABB04A080,AABB04A090,AABB04A100,AABB04A110,AABB04A120
+	</sql>
+
+	<!-- create domain -->
+	<insert id="create" parameterType="com.prj.goldapple.bean.AABB04A">
+		insert into AABB04A
+		(
+		<include refid="allColumn" />
+		)
+		values
+		(
+		#{AABB04A010},#{AABB04A020},#{AABB04A030},#{AABB04A040},#{AABB04A050},#{AABB04A060},#{AABB04A070},#{AABB04A080},#{AABB04A090},#{AABB04A100},#{AABB04A110},#{AABB04A120}
+		)
+	</insert>
+
+	<!-- update domain -->
+	<update id="update" parameterType="com.prj.goldapple.bean.AABB04A">
+		update AABB04A
+		<set>
+			 
+         <if test="AABB04A010 != null">AABB04A010 = #{AABB04A010}, </if>
+         <if test="AABB04A020 != null">AABB04A020 = #{AABB04A020}, </if>
+         <if test="AABB04A030 != null">AABB04A030 = #{AABB04A030}, </if>
+         <if test="AABB04A040 != null">AABB04A040 = #{AABB04A040}, </if>
+         <if test="AABB04A050 != null">AABB04A050 = #{AABB04A050}, </if>
+         <if test="AABB04A060 != null">AABB04A060 = #{AABB04A060}, </if>
+         <if test="AABB04A070 != null">AABB04A070 = #{AABB04A070}, </if>
+         <if test="AABB04A080 != null">AABB04A080 = #{AABB04A080}, </if>
+         <if test="AABB04A090 != null">AABB04A090 = #{AABB04A090}, </if>
+         <if test="AABB04A100 != null">AABB04A100 = #{AABB04A100}, </if>
+         <if test="AABB04A110 != null">AABB04A110 = #{AABB04A110}, </if>
+         <if test="AABB04A120 != null">AABB04A120 = #{AABB04A120}, </if>
+		</set>
+		where AABB04A010 = #{AABB04A010}
+	</update>
+
+	<!-- delete domain -->
+	<delete id="delete" parameterType="java.lang.String">
+		delete from AABB04A
+		where
+		AABB04A010 = #{AABB04A010}
+	</delete>
+
+	<!-- query domain where condition -->
+	<sql id="dynamicWhere">
+		 
+         <if test="AABB04A010 != null">and AABB04A010 like '%'||#{AABB04A010}||'%'</if>
+         <if test="AABB04A020 != null">and AABB04A020 like '%'||#{AABB04A020}||'%'</if>
+         <if test="AABB04A030 != null">and AABB04A030 like '%'||#{AABB04A030}||'%'</if>
+         <if test="AABB04A040 != null">and AABB04A040 like '%'||#{AABB04A040}||'%'</if>
+         <if test="AABB04A050 != null">and AABB04A050 like '%'||#{AABB04A050}||'%'</if>
+         <if test="AABB04A060 != null">and AABB04A060 like '%'||#{AABB04A060}||'%'</if>
+         <if test="AABB04A070 != null">and AABB04A070 like '%'||#{AABB04A070}||'%'</if>
+         <if test="AABB04A080 != null">and AABB04A080 like '%'||#{AABB04A080}||'%'</if>
+         <if test="AABB04A090 != null">and AABB04A090 like '%'||#{AABB04A090}||'%'</if>
+         <if test="AABB04A100 != null">and AABB04A100 like '%'||#{AABB04A100}||'%'</if>
+         <if test="AABB04A110 != null">and AABB04A110 like '%'||#{AABB04A110}||'%'</if>
+         <if test="AABB04A120 != null">and AABB04A120 like '%'||#{AABB04A120}||'%'</if>
+	</sql>
+
+	<!-- query domain -->
+	<select id="queryForList" resultMap="BaseResultMap" parameterType="java.util.HashMap">
+		select
+		<include refid="allColumn" />
+		from AABB04A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		select count(*)
+		from AABB04A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
+		select
+		<include refid="allColumn" />
+		from AABB04A
+		where AABB04A010 = #{AABB04A010}
+	</select>
+
+</mapper>

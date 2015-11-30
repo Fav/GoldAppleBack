@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.prj.goldapple.dao.DecorationEventDao">
+	<!-- result map -->
+	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.AABB03A">
+           <id property="AABB03A010" column="AABB03A010" />
+           <id property="AABB03A020" column="AABB03A020" />
+           <id property="AABB03A030" column="AABB03A030" />
+           <id property="AABB03A040" column="AABB03A040" />
+           <id property="AABB03A050" column="AABB03A050" />
+           <id property="AABB03A060" column="AABB03A060" />
+           <id property="AABB03A070" column="AABB03A070" />
+           <id property="AABB03A080" column="AABB03A080" />
+           <id property="AABB03A090" column="AABB03A090" />
+           <id property="AABB03A100" column="AABB03A100" />
+           <id property="AABB03A110" column="AABB03A110" />
+           <id property="AABB03A120" column="AABB03A120" />
+           <association property="AABB04A" column="AABB03A020" select="getHouseInfo" />
+           <association property="AABB02A" column="AABB03A120" select="getUserInfo" />
+	</resultMap>
+
+	<!-- column fields -->
+	<sql id="allColumn">
+		 AABB03A010,AABB03A020,AABB03A030,AABB03A040,AABB03A050,AABB03A060,AABB03A070,AABB03A080,AABB03A090,AABB03A100,AABB03A110,AABB03A120
+	</sql>
+
+	<!-- create domain -->
+	<insert id="create" parameterType="com.prj.goldapple.bean.AABB03A">
+		insert into AABB03A
+		(
+		<include refid="allColumn" />
+		)
+		values
+		(
+		#{AABB03A010},#{AABB03A020},#{AABB03A030},#{AABB03A040},#{AABB03A050},#{AABB03A060},#{AABB03A070},#{AABB03A080},#{AABB03A090},#{AABB03A100},#{AABB03A110},#{AABB03A120}
+		)
+	</insert>
+
+	<!-- update domain -->
+	<update id="update" parameterType="com.prj.goldapple.bean.AABB03A">
+		update AABB03A
+		<set>
+			 
+         <if test="AABB03A010 != null">AABB03A010 = #{AABB03A010}, </if>
+         <if test="AABB03A020 != null">AABB03A020 = #{AABB03A020}, </if>
+         <if test="AABB03A030 != null">AABB03A030 = #{AABB03A030}, </if>
+         <if test="AABB03A040 != null">AABB03A040 = #{AABB03A040}, </if>
+         <if test="AABB03A050 != null">AABB03A050 = #{AABB03A050}, </if>
+         <if test="AABB03A060 != null">AABB03A060 = #{AABB03A060}, </if>
+         <if test="AABB03A070 != null">AABB03A070 = #{AABB03A070}, </if>
+         <if test="AABB03A080 != null">AABB03A080 = #{AABB03A080}, </if>
+         <if test="AABB03A090 != null">AABB03A090 = #{AABB03A090}, </if>
+         <if test="AABB03A100 != null">AABB03A100 = #{AABB03A100}, </if>
+         <if test="AABB03A110 != null">AABB03A110 = #{AABB03A110}, </if>
+         <if test="AABB03A120 != null">AABB03A120 = #{AABB03A120}, </if>
+		</set>
+		where AABB03A010 = #{AABB03A010}
+	</update>
+
+	<!-- delete domain -->
+	<delete id="delete" parameterType="java.lang.String">
+		delete from AABB03A
+		where
+		AABB03A010 = #{AABB03A010}
+	</delete>
+
+	<!-- query domain where condition -->
+	<sql id="dynamicWhere">
+		 
+         <if test="AABB03A010 != null">and AABB03A010 like '%'||#{AABB03A010}||'%'</if>
+         <if test="AABB03A020 != null">and AABB03A020 like '%'||#{AABB03A020}||'%'</if>
+         <if test="AABB03A030 != null">and AABB03A030 like '%'||#{AABB03A030}||'%'</if>
+         <if test="AABB03A040 != null">and AABB03A040 like '%'||#{AABB03A040}||'%'</if>
+         <if test="AABB03A050 != null">and AABB03A050 like '%'||#{AABB03A050}||'%'</if>
+         <if test="AABB03A060 != null">and AABB03A060 like '%'||#{AABB03A060}||'%'</if>
+         <if test="AABB03A070 != null">and AABB03A070 like '%'||#{AABB03A070}||'%'</if>
+         <if test="AABB03A080 != null">and AABB03A080 like '%'||#{AABB03A080}||'%'</if>
+         <if test="AABB03A090 != null">and AABB03A090 like '%'||#{AABB03A090}||'%'</if>
+         <if test="AABB03A100 != null">and AABB03A100 like '%'||#{AABB03A100}||'%'</if>
+         <if test="AABB03A110 != null">and AABB03A110 like '%'||#{AABB03A110}||'%'</if>
+         <if test="AABB03A120 != null">and AABB03A120 like '%'||#{AABB03A120}||'%'</if>
+	</sql>
+
+	<!-- query domain -->
+	<select id="queryForList" resultMap="BaseResultMap" parameterType="java.util.HashMap">
+		select
+		<include refid="allColumn" />
+		from AABB03A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		select count(*)
+		from AABB03A
+		<where>
+			<include refid="dynamicWhere" />
+		</where>
+	</select>
+
+	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
+		select
+		<include refid="allColumn" />
+		from AABB03A
+		where AABB03A010 = #{AABB03A010}
+	</select>
+	<select id="getHouseInfo" resultType="com.prj.goldapple.bean.AABB04A" parameterType="java.lang.String">
+		select * 
+		from AABB04A 
+		where AABB04A010 = #{AABB03A020}
+	</select>
+	<select id="getUserInfo" resultType="com.prj.goldapple.bean.AABB02A" parameterType="java.lang.String">
+		select * 
+		from AABB02A 
+		where AABB02A010 = #{AABB03A120}
+	</select>
+</mapper>

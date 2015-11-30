@@ -1,0 +1,30 @@
+--房屋信息
+create table  AABB04A
+(
+    AABB04A010 VARCHAR2(36) not null,
+    AABB04A020 VARCHAR2(36),
+    AABB04A030 NUMBER(10,2),
+    AABB04A040 NUMBER(10,2),
+    AABB04A050 VARCHAR2(50),
+    AABB04A060 VARCHAR2(50),
+    AABB04A070 VARCHAR2(100),
+    AABB04A080 NUMBER(10,2),
+    AABB04A090 NUMBER(10,2),
+    AABB04A100 VARCHAR2(500),
+    AABB04A110 VARCHAR2(500),
+    AABB04A120 VARCHAR2(50),
+    primary key (AABB04A010)
+);
+comment on table AABB04A is '房屋信息';
+comment on column AABB04A.AABB04A010 is '编号';
+comment on column AABB04A.AABB04A020 is '关联编号用户id';
+comment on column AABB04A.AABB04A030 is '建筑面积';
+comment on column AABB04A.AABB04A040 is '赠送面积';
+comment on column AABB04A.AABB04A050 is '所在市';
+comment on column AABB04A.AABB04A060 is '所在区县';
+comment on column AABB04A.AABB04A070 is '所在小区';
+comment on column AABB04A.AABB04A080 is '经度';
+comment on column AABB04A.AABB04A090 is '纬度';
+comment on column AABB04A.AABB04A100 is '房屋图片 路径';
+comment on column AABB04A.AABB04A110 is '房屋描述 三居室';
+comment on column AABB04A.AABB04A120 is '户主';

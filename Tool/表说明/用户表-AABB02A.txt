@@ -1,0 +1,30 @@
+﻿--用户
+create table  AABB02A
+(
+    AABB02A010 VARCHAR2(36) not null,
+    AABB02A020 INT,
+    AABB02A030 VARCHAR2(500),
+    AABB02A040 VARCHAR2(500),
+    AABB02A050 VARCHAR2(500),
+    AABB02A060 VARCHAR2(500),
+    AABB02A070 VARCHAR2(500),
+    AABB02A080 VARCHAR2(500),
+    AABB02A090 VARCHAR2(500),
+    AABB02A100 NUMBER(10,2),
+    AABB02A110 VARCHAR2(500),
+    AABB02A120 VARCHAR2(500),
+    primary key (AABB02A010)
+);
+comment on table AABB02A is '用户表';
+comment on column AABB02A.AABB02A010 is '编号';
+comment on column AABB02A.AABB02A020 is '用户类型';
+comment on column AABB02A.AABB02A030 is '姓名';
+comment on column AABB02A.AABB02A040 is '用户名';
+comment on column AABB02A.AABB02A050 is '密码';
+comment on column AABB02A.AABB02A060 is '邮箱';
+comment on column AABB02A.AABB02A070 is '手机号码';
+comment on column AABB02A.AABB02A080 is '我的推荐码';
+comment on column AABB02A.AABB02A090 is '谁推荐我的 用户ID或者为空';
+comment on column AABB02A.AABB02A100 is '返利余额';
+comment on column AABB02A.AABB02A110 is '推荐链接';
+comment on column AABB02A.AABB02A120 is '注册时间';
