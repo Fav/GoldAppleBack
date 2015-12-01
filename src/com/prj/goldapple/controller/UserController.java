@@ -146,7 +146,7 @@ public class UserController {
 				map.put(CommonVar.RESULT,"用户名不存在");
 				return map;
 			}
-			if (temp.getAABB02A050() != temp.getAABB02A050()) {
+			if (!aabb02a.getAABB02A050().equals(temp.getAABB02A050())) {
 				map.put(CommonVar.RESULT,"密码错误");
 				return map;
 			}
@@ -160,7 +160,7 @@ public class UserController {
 				map.put(CommonVar.RESULT,"用户名不存在");
 				return map;
 			}
-			if (temp.getAABB02A050() != temp.getAABB02A050()) {
+			if (!aabb02a.getAABB02A050().equals(temp.getAABB02A050())) {
 				map.put(CommonVar.RESULT,"密码错误");
 				return map;
 			}

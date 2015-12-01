@@ -17,6 +17,7 @@ function login() {
      			if (json.result == "success") {
      				top.user = json.abaa02a;
 					alert("登录成功");
+					top.location='../index.html'; 
 				}else{
 					alert(json.result);
 				}
