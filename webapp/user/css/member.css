@@ -26,9 +26,6 @@
  	padding: 20px 0 0 0;
  }
 
- input[type='text'],input[type='password'] {
- 	width: 145px!important;
- }
  .login-btn {
  	width: 245px!important;
  }
@@ -81,4 +78,68 @@
 .login2-btn {
 	margin-left: 93px;
 	margin-top:10px;
+}
+
+.yuyue-main {
+	font-size: 18px;
+
+}
+.yuyue-main h1 {
+	margin: 10px 30px;
+}
+.yuyue-main > div {
+	margin: 10px 20px;
+}
+
+.yuyue-longinput span,.yuyue-select span,.yuyue-shortinput span,.yuyue-radio span {
+	border:0px red solid;
+	float: left;
+	margin-left: 10px;
+}
+.yueyue-label {
+	display: inline-block;
+	width: 92px;
+}
+.yuyue-longinput input {
+	width: 200px;
+}
+.yuyue-shortinput input {
+	width: 55px;
+}
+.yuyue-offset {
+	margin-left: 135px!important;
+}
+
+.emailyz {
+	position: relative;
+	top:35%;
+	left: 30%;
+}
+.emailyz h1 {
+	font-size: 30px;
+	float: left;
+	position: relative;
+	top:-10px;
+}
+div.emailyz-title-tips {
+	display: inline-block;
+	height:20px;
+	font-size: 12px;
+	padding-top: 4px;
+	border:0px red solid;
+	margin-left: 29px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+.emailyz-querentixing {
+	font-size: 20px;
+}
+.emailyz-tips {
+	font-size: 12px;
+	color: #333;
+}
+.emailyz-content {
+	padding: 30px 20px;
+	border:1px #eee solid;
+	width: 653px;
 }
