@@ -17,9 +17,9 @@
        <id property="AABB02A120" column="AABB02A120" />
        <id property="AABB02A130" column="AABB02A130" />
        <id property="AABB02A140" column="AABB02A140" />
-	<id property="AABB02A150" column="AABB02A150" />
-	<id property="AABB02A160" column="AABB02A160" />
-       <association property="AABB01A" column="AABB02A020" select="getUserType" />
+	   <id property="AABB02A150" column="AABB02A150" />
+	   <id property="AABB02A160" column="AABB02A160" />
+       <!-- <association property="AABB01A" column="AABB02A020" select="getUserType" />-->
 	</resultMap>
 
 	<!-- column fields -->
@@ -98,14 +98,12 @@
 	</select>
 	
 	<select id="queryByEmail" resultMap="BaseResultMap" parameterType="java.lang.String">
-		select
-		<include refid="allColumn" />
+		select *
 		from AABB02A where AABB02A060 = #{AABB02A060}
 	</select>
 
 	<select id="queryByPhone" resultMap="BaseResultMap" parameterType="java.lang.String">
-		select
-		<include refid="allColumn" />
+		select *
 		from AABB02A where AABB02A070 = #{AABB02A070}
 	</select>
 	

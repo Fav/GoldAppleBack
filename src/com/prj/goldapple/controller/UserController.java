@@ -129,4 +129,46 @@ public class UserController {
 	public List<String> Test() throws Exception {
 		return new ArrayList<String>();
 	}
+	
+	@ResponseBody
+	@RequestMapping("login")
+	public Map<String, String> login(AABB02A aabb02a) throws Exception {
+		Map<String, String> map = new HashMap<String, String>();
+		if (aabb02a == null) {
+			map.put(CommonVar.RESULT, CommonVar.FAIL);
+			return map;
+		}
+		//邮箱登录
+		String email = aabb02a.getAABB02A060();
+		if (email != null) {
+			AABB02A temp = userService.queryByEmail(email);
+			if (temp == null) {
+				map.put(CommonVar.RESULT,"用户名不存在");
+				return map;
+			}
+			if (temp.getAABB02A050() != temp.getAABB02A050()) {
+				map.put(CommonVar.RESULT,"密码错误");
+				return map;
+			}
+			aabb02a.setAABB02A010(temp.getAABB02A010());
+		}
+		//手机登录
+		String phone = aabb02a.getAABB02A070();
+		if (phone != null) {
+			AABB02A temp = userService.queryByEmail(email);
+			if (temp == null) {
+				map.put(CommonVar.RESULT,"用户名不存在");
+				return map;
+			}
+			if (temp.getAABB02A050() != temp.getAABB02A050()) {
+				map.put(CommonVar.RESULT,"密码错误");
+				return map;
+			}
+			aabb02a.setAABB02A010(temp.getAABB02A010());
+		}
+		
+		map.put(CommonVar.RESULT, CommonVar.SUCCESS);
+		map.put("uid", aabb02a.getAABB02A010());
+		return map;
+	}
 }

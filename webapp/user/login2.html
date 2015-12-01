@@ -5,25 +5,29 @@
 	<title>登陆</title>
 	
 	<link href="../css/style.css" rel="stylesheet" />
-	<link href="../user/css/member.css" rel="stylesheet" />
+	<link href="../css/member.css" rel="stylesheet" />
+	<script type="text/javascript" src="../jslib/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="login2.js"></script>
 </head>
 <body>
 	<div class="login2-main">
 		<h1>用户登陆	</h1>
-		<div class="login2-content">
-			<div class="login-username ksyy_box_bd">
-				<span>用户名：</span><span><input type="text" value="" name="USERNAME"></span>
+		<form action="" >
+			<div class="login2-content">
+				<div class="login-username ksyy_box_bd">
+					<span>用户名：</span><span><input type="text" value="gy@qq.com" name="USERNAME" id="username"/></span>
+				</div>
+				<div class="login2-pwd ksyy_box_bd">
+					<span>密<i></i>码：</span><span><input type="password" value="12345" name="PWD" id= "pwd"/></span>
+				</div>
+				<div class="login2-pzm ksyy_box_bd">
+					<span>验证码：</span><span><input type="text" value="" name="YZM" /></span><span><a>随机数</a></span>
+				</div>
+				<div class="login2-btn" onclick="login()">
+					登陆
+				</div>
 			</div>
-			<div class="login2-pwd ksyy_box_bd">
-				<span>密<i></i>码：</span><span><input type="password" value="" name="PWD"></span>
-			</div>
-			<div class="login2-pzm ksyy_box_bd">
-				<span>验证码：</span><span><input type="text" value="" name="YZM"></span><span><a>随机数</a></span>
-			</div>
-			<div class="login2-btn">
-				登陆
-			</div>
-		</div>
+		</form>
 	</div>
 </body>
 </html>
