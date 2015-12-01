@@ -24,7 +24,7 @@
 
 	<!-- column fields -->
 	<sql id="allColumn">
-		 AABB02A010,AABB02A020,AABB02A030,AABB02A040,AABB02A050,AABB02A060,AABB02A070,AABB02A080,AABB02A090,AABB02A100,AABB02A110,AABB02A120,AABB02A130,AABB02A140
+		 AABB02A010,AABB02A020,AABB02A030,AABB02A040,AABB02A050,AABB02A060,AABB02A070,AABB02A080,AABB02A090,AABB02A100,AABB02A110,AABB02A120,AABB02A130,AABB02A140,AABB02A150,AABB02A160
 	</sql>
 
 	<!-- create domain -->
@@ -35,7 +35,7 @@
 		)
 		values
 		(
-		#{AABB02A010},#{AABB02A020},#{AABB02A030},#{AABB02A040},#{AABB02A050},#{AABB02A060},#{AABB02A070},#{AABB02A080},#{AABB02A090},#{AABB02A100},#{AABB02A110},#{AABB02A120},#{AABB02A130},#{AABB02A140}
+		#{AABB02A010},#{AABB02A020},#{AABB02A030},#{AABB02A040},#{AABB02A050},#{AABB02A060},#{AABB02A070},#{AABB02A080},#{AABB02A090},#{AABB02A100},#{AABB02A110},#{AABB02A120},#{AABB02A130},#{AABB02A140},#{AABB02A150},#{AABB02A160}
 		)
 	</insert>
 
@@ -58,6 +58,8 @@
          <if test="AABB02A120 != null">AABB02A120 = #{AABB02A120}, </if>
          <if test="AABB02A130 != null">AABB02A130 = #{AABB02A130}, </if>
          <if test="AABB02A140 != null">AABB02A140 = #{AABB02A140}, </if>
+         <if test="AABB02A150 != null">AABB02A150 = #{AABB02A150}, </if>
+         <if test="AABB02A160 != null">AABB02A160 = #{AABB02A160}, </if>
 		</set>
 		where AABB02A010 = #{AABB02A010}
 	</update>
@@ -85,6 +87,8 @@
          <if test="AABB02A120 != null">and AABB02A120 like '%'||#{AABB02A120}||'%'</if>
          <if test="AABB02A130 != null">and AABB02A130 like '%'||#{AABB02A130}||'%'</if>
          <if test="AABB02A140 != null">and AABB02A140 like '%'||#{AABB02A140}||'%'</if>
+         <if test="AABB02A150 != null">and AABB02A150 = #{AABB02A150},</if>
+         <if test="AABB02A160 != null">and AABB02A160 = #{AABB02A160},</if>
 	</sql>
 
 	<!-- query domain -->
@@ -119,8 +123,8 @@
 	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
 		select
 		<include refid="allColumn" /> 
-		from AABB02A,AABB01A 
-		where AABB01A.AABB01A010=AABB02A020 and AABB02A010 = #{AABB02A010}
+		from AABB02A
+		where  AABB02A010 = #{AABB02A010}
 	</select>
 	<select id="getUserType" resultType="com.prj.goldapple.bean.AABB01A" parameterType="int">
 		select * 

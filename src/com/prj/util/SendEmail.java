@@ -42,9 +42,8 @@ public class SendEmail {
 				message.setFrom(new InternetAddress(fromMail));
 				message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(toMail));
-				message.setSubject("Testing Subject");
-				message.setText("Dear Mail Crawler,"
-					+ "\n\n No spam to my email, please!");
+				message.setSubject(mailTitle);
+				message.setText(mailContent);
 				//Session.getDefaultInstance(props, authentic); 
 				Transport.send(message);
 
@@ -54,10 +53,8 @@ public class SendEmail {
 				throw new RuntimeException(e);
 			}
 	}
-    public static void Test() throws Exception {  
-        send("f115457@163.com", "f115457", "f1154571",  
-                "f25457@qq.com",  
-                "Java Mail 测试邮件",  
-                "<a>html 元素</a>：<b>邮件内容</b>");  
+    public static void doSend(String toEmail,String id,String code) throws Exception {  
+        send("f115457@163.com", "f115457", "f1154571",toEmail, "验证邮件",  
+                "<a ref='http://localhost:8080/GoldApple/user/verificationEmail.do?u="+id+"&c="+code+"' >点击链接进行验证</a>");  
     }  
 }
