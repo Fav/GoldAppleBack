@@ -1,0 +1,149 @@
+/**
+	houserinfo页面样式
+*/
+.userinfo {
+	font-size: 18px;
+}
+.houserinfo {
+	margin: 20px 30px;
+}
+
+/*装修阶段样式*/
+hr {
+	border:1px #c4c4c4 solid;
+	width: 100%;
+}
+.zxjieduan {
+	border:0px red solid;
+	margin: 10px 20px;
+}
+.jieduan-left {
+	width: 101px;
+	height: 200px;
+	border: 0px blue solid;
+	float: left;
+}
+.jieduan-main {
+	max-width: 1000px;
+	float: left;
+	border: 0px blue solid;
+	padding: 20px 10px;
+
+}
+.jieduan-main h1 {
+	font-size: 20px;
+}
+.jieduan-more {
+	font-size: 18px;
+	font-weight: 700;
+}
+.jieduan-money,.jieduan-day,.jieduan-ask,.jieduan-more {
+	text-align: center;
+}
+.jieduan-day {
+	border: 3px #c5c5c5 solid;
+	font-size: 20px;
+	
+	margin: 0 auto;
+	margin-top:20px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+}
+.jieduan-ask {
+	margin-top: 10px;
+}
+.jiaduan-label {
+	color: #b9b9b9;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.jieduan-picture ul li {
+	float: left;
+	margin-right: 10px;
+}
+.jieduan-picture,.jieduan-ask-builder,.jieduan-ask-me {
+	margin-top: 10px;
+}
+.jieduan-ask-me {
+	color: #000000;
+}
+.jieduan-ask-builder {
+	color: #7a7a7a;
+}
+.zxjieduan:after{
+	content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.clear {
+	clear: both;
+}
+.visibility {
+	display: none;
+}
+
+.tuijianyl {
+	margin:10px 15px;
+}
+.tuijianyl-label,.fanlimoney,.mytuijianma{
+	font-size: 18px;
+}
+.fanlimoney {
+	color: #ffbe5d;
+}
+.tixianBtn {
+	padding: 5px;
+	border:1px #979797 solid;
+	background-color: #cccccc;
+}
+.fanliguize {
+	float: right;
+}
+.fanlileiji {
+	padding: 7px 0px;
+}
+.fanlileiji span{
+	color: #bebebe;
+	font-size: 13px;
+	
+}
+.mytuijianma {
+	color: #14a0a0;
+	font-weight: 800;
+	
+}
+.tuijianyl-tuijianma {
+	margin: 10px 0;
+}
+.tuijian-color {
+	color: #b3b3b3;
+}
+.tuijian-tips-offset {
+	display: inline-block;
+	margin: 7px 0;
+}
+.tuijian-fuzhilianjie{
+	border:1px #949494 solid;
+	background-color: #cccccc;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	width: 65px;
+	margin-left: 10px;
+	text-align: center;
+}
+.tuijianjilu-info ,.tuijianjilu-info tr,.tuijianjilu-info td{
+	border:1px #c2c2c2 solid;
+}
+.tuijianjilu-info td {
+	width: 97px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}
+.tuijianyl-tuijianjilu {
+	margin: 20px 0;
+}
