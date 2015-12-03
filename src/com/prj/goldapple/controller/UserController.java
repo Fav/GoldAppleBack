@@ -43,6 +43,7 @@ public class UserController {
 			aabb02a.setAABB02A010(id);
 			aabb02a.setAABB02A020(3);
 			String code = CommonMethod.getRandomString(6);
+			//TODO:验证email是否已经注册
 			aabb02a.setAABB02A080(code);//推荐码
 			aabb02a.setAABB02A120(new Date().toString());		
 			aabb02a.setAABB02A130(0);

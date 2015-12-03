@@ -140,8 +140,8 @@ div:after, ul:after, dl:after { content: ""; display: block; clear: both; height
 .tdgw_zixun_fd a { width: 160px; height: 40px; text-align: center; background: #ff9900; color: #ffffff; margin: 0px auto; display: block; line-height: 40px; }
 /*套餐*/
 .taocan_box b { display:none;}
-.taocan_001 { background: url(img/taocan.jpg) no-repeat center top; height: 659px; position:relative;}
-.taocan_001 .pc_w { height:659px;}
+.taocan_001 { background: url(img/taocan.jpg) no-repeat center top; height: 40px; position:relative;}
+.taocan_001 .pc_w { height:40px;}
 .taocan_nav { position:absolute; left:0px; bottom:0px;}
 .taocan_nav li { float:left; width:236px;height:60px; text-align:center; font-size:18px; line-height:59px;}
 .taocan_nav li.dangqian { background:#ffffff;}
