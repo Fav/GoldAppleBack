@@ -88,8 +88,9 @@ public class HouseInfoController {
 
 	@ResponseBody
 	@RequestMapping("queryForList")
-	public List<AABB04A> queryForList() {
-		List<AABB04A> lst = houseInfoService.queryForList(null);
+	public List<AABB04A> queryForList(HashMap map) {
+		map.put("AABB04A010", "String");
+		List<AABB04A> lst = houseInfoService.queryForList(map);
 		return lst;
 	}
 }
