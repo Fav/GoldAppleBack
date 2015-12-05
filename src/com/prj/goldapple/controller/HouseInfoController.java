@@ -93,4 +93,13 @@ public class HouseInfoController {
 		List<AABB04A> lst = houseInfoService.queryForList(map);
 		return lst;
 	}
+	
+	@ResponseBody
+	@RequestMapping("queryByIdForList")
+	public HashMap queryByIdForList(String id) {
+	//	map.put("AABB04A010", "String");
+		id = "001";
+		HashMap lst = houseInfoService.queryByIdForList(id);
+		return lst;
+	}
 }

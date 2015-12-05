@@ -1,5 +1,6 @@
 ﻿package com.prj.goldapple.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -61,6 +62,12 @@ public class HouseInfoService implements IHouseInfoService {
 	 */
 	public List<AABB04A>  queryForList(Map<String, Object> params) {
 		return houseInfoDao.queryForList(params);
+	}
+
+	@Override
+	public HashMap queryByIdForList(String key) {
+		// TODO Auto-generated method stub
+		return houseInfoDao.queryByIdForList(key);
 	}
 
 }

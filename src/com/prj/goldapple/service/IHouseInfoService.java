@@ -1,5 +1,6 @@
 ﻿package com.prj.goldapple.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,4 +23,6 @@ public interface IHouseInfoService {
     public abstract int update(AABB04A example);
     	    
     public abstract List<AABB04A> queryForList(Map<String,Object> params);
+    
+    public abstract HashMap queryByIdForList(String key);
 }

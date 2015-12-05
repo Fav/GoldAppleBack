@@ -9,15 +9,16 @@
 	$.ajax({
      	type: "get",
 		async: false,
-     	url: "queryForList.do",
+     	url: "queryByIdForList.do",
      	data: json,
      	success:function(json){
-     		if ($.isArray(json)){
-     			$(".js-mianji").html(json[0]["aabb04A030"] + json[0]["aabb04A040"]+"平米");
-     			$(".js-dizhi").html(json[0]["aabb04A050"] + json[0]["aabb04A060"]+json[0]["aabb04A070"]);
-     			var huxing = json[0]["aabb04A110"].replace(",", " ");
+     		if (json){
+     			$(".js-mianji").html(json["AABB04A030"] + json["AABB04A040"]+"平米");
+     			$(".js-dizhi").html(json["AABB04A050"] + json["AABB04A060"]+json["AABB04A070"]);
+     			var huxing = json["AABB04A110"].replace(",", " ");
+                    var taican = json["AABB03A030"];
      			$(".js-huxing").html(huxing);
-     			$(".js-huxing").html(huxing);
+     			$(".js-taican").html(taican);
      		 }
      	},
      	error:function(ex){
