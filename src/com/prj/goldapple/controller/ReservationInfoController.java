@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.prj.goldapple.bean.AABB04A;
 import com.prj.goldapple.bean.AABB05A;
 import com.prj.goldapple.service.IReservationInfoService;
 import com.prj.util.CommonVar;
@@ -38,7 +39,7 @@ public class ReservationInfoController {
 	
 	@ResponseBody
 	@RequestMapping("create")
-	public Map<String, String> create(AABB05A aabb05a) {
+	public Map<String, String> create(AABB05A aabb05a,AABB04A aabb04a) {
 		Map<String, String> map = new HashMap<String, String>();
 		try {
 			aabb05a.setAABB05A010(UUID.randomUUID().toString());

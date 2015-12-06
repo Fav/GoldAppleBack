@@ -64,7 +64,6 @@ public class HouseInfoService implements IHouseInfoService {
 		return houseInfoDao.queryForList(params);
 	}
 
-	@Override
 	public HashMap queryByIdForList(String key) {
 		// TODO Auto-generated method stub
 		return houseInfoDao.queryByIdForList(key);
