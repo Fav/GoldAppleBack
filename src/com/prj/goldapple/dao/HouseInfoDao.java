@@ -1,5 +1,6 @@
 ﻿package com.prj.goldapple.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,4 +23,6 @@ public interface HouseInfoDao {
     public int update(AABB04A example);
     
     public List<AABB04A> queryForList(Map<String,Object> params);
+    
+    public HashMap queryByIdForList(String key);
 }

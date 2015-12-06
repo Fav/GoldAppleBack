@@ -89,6 +89,12 @@
 			<include refid="dynamicWhere" />
 		</where>
 	</select>
+	
+	<select id="queryByIdForList" resultType="java.util.HashMap" parameterType="java.lang.String">
+		select   a4.*
+		,a3.AABB03A030 from AABB04A  a4 
+		LEFT JOIN aabb03a a3 on  a4.AABB04A010 = #{AABB04A010} and a3.AABB03A020 = a4.AABB04A010
+	</select>
 
 	<select id="queryCount" resultType="java.lang.Integer"
 		parameterType="java.util.HashMap">
